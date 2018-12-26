@@ -12,7 +12,7 @@ import com.psycontrol.entity.Patient;
 @Service
 public class AppServicesImplement implements AppServices {
 	
-	// need to inject customer DAO
+	// need to inject Patient DAO
 		@Autowired
 		private PatientDAO patientDAO;
 
@@ -23,16 +23,19 @@ public class AppServicesImplement implements AppServices {
 		}
 
 		@Override
+		@Transactional
 		public void savePatient(Patient patient) {
 			patientDAO.save(patient);
 		}
 
 		@Override
+		@Transactional(readOnly=true)
 		public Patient getPatient(Integer pid) {
 			return patientDAO.findById(pid).get();
 		}
 
 		@Override
+		@Transactional
 		public void deletePatient(Integer pid) {
 			patientDAO.deleteById(pid);
 		}

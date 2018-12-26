@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Patient")
+@Table(name="patient")
 public class Patient {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name="pid")
 	private Integer pid;
 	
 	@Column(name="nombre")
@@ -29,9 +29,9 @@ public class Patient {
 	private String email;
 	
 	@Column(name="telefono")
-	private int telefono;
+	private String telefono;
 	
-	public int getPid() {
+	public Integer getPid() {
 		return pid;
 	}
 	public void setPid(Integer pid) {
@@ -61,10 +61,10 @@ public class Patient {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	@Override

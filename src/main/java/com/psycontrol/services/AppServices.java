@@ -1,7 +1,7 @@
 package com.psycontrol.services;
 
 import java.util.List;
-import com.psycontrol.entity.*;
+import com.psycontrol.entity.Patient;
 
 public interface AppServices {
 
