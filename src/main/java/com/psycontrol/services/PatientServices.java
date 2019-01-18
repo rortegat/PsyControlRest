@@ -10,7 +10,7 @@ import com.psycontrol.dao.PatientDAO;
 import com.psycontrol.entity.Patient;
 
 @Service
-public class AppServicesImplement implements AppServices {
+public class PatientServices implements AppServices {
 	
 	// need to inject Patient DAO
 		@Autowired

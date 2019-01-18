@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @RestController
 @RequestMapping("/api")
-class HomeController {
+class PatientController {
 	
 	@Autowired
 	private AppServices appServices;
